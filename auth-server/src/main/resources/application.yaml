@@ -1,2 +1,47 @@
 server:
   port: 8080
+
+spring:
+  security:
+    oauth2:
+      authorizationserver:
+        client:
+          online-shop:
+            registration:
+              client-id: "online-shop"
+              client-secret: "{noop}pwd"
+              client-authentication-methods:
+                - "client_secret_basic"
+              authorization-grant-types:
+                - "client_credentials"
+              scopes:
+                - "read.only"
+                - "write"
+                - "change.name"
+
+
+
+
+
+#  RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
+#  .clientId("messaging-client")
+#  .clientSecret("{noop}secret")
+#  .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+#  .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
+#  .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
+#  .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+#  .redirectUri("http://127.0.0.1:8080/login/oauth2/code/messaging-client-oidc")
+#  .redirectUri("http://127.0.0.1:8080/authorized")
+#  .scope(OidcScopes.OPENID)
+#  .scope("message.read")
+#  .scope("message.write")
+#  .tokenSettings(TokenSettings.builder()
+#  .accessTokenTimeToLive(Duration.ofMinutes(5))
+#  .refreshTokenTimeToLive(Duration.ofHours(2))
+#  .build())
+#  .clientSettings(ClientSettings.builder().requireAuthorizationConsent(true).build())
+#  .build();
+
+
+
+#access-token-validity-seconds: 30

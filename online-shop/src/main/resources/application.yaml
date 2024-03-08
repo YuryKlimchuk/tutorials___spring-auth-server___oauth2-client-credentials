@@ -1,2 +1,19 @@
 server:
   port: 8082
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          catalog:
+            provider: spring
+            client-id: online-shop
+            client-secret: pwd
+            authorization-grant-type: client_credentials
+            scope:
+              - "read.only"
+              - "change.name"
+        provider:
+          spring:
+            token-uri: http://localhost:8080/oauth2/token
