@@ -19,13 +19,11 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class OauthConfig {
 
     @Bean
-    @Order(2)
     SecurityFilterChain securityFilterChain2(HttpSecurity http) throws Exception {
         http.authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
         http.oauth2Client(Customizer.withDefaults());
         return http.build();
     }
-
 
     @Bean
     OAuth2AuthorizedClientManager authorizedClientManager(ClientRegistrationRepository clientRegistrationRepository, OAuth2AuthorizedClientRepository authorizedClientRepository) {
