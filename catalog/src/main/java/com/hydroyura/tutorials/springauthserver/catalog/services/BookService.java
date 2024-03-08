@@ -21,6 +21,7 @@ public class BookService {
     private Integer BOOKS_COUNT = 1_000;
     private Integer AUTHORS_COUNT = 25;
 
+
     @PostConstruct
     void initBookRepository() {
         Random random = new Random();
@@ -44,10 +45,6 @@ public class BookService {
                 .setTitle(faker.book().title()))
             .peek(System.out::println)
             .collect(Collectors.toCollection(ArrayList::new));
-    }
-
-    public Optional<Book> findById(Integer id) {
-        return Optional.ofNullable(repository.get(id));
     }
 
     public List<Book> findAllWithLimit(Integer limit) {
