@@ -24,6 +24,7 @@
         <module>online-shop</module>
         <module>catalog</module>
         <module>auth-server</module>
+        <module>shared-libs</module>
     </modules>
 
 </project>

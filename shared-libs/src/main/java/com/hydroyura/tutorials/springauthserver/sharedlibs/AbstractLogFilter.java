@@ -1,9 +1,8 @@
-package com.hydroyura.tutorials.springauthserver.authserver.configs;
+package com.hydroyura.tutorials.springauthserver.sharedlibs;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.servlet.*;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 
 import java.io.IOException;

@@ -1,5 +1,6 @@
 package com.hydroyura.tutorials.springauthserver.authserver.configs;
 
+import com.hydroyura.tutorials.springauthserver.sharedlibs.AbstractLogFilter;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
